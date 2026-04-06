@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:link{
+    color: #333;
+}
+
+header{
+
+}
+
+.logo{
+    margin:10px auto;
+    width: 200px;
+    height: 100px;
+    background-image: url(/personal_portfolio/images/logo-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(200 , 55, 150);
+    text-shadow: 2px 2px 1px #222;
+    border-radius: 10px;
+    opacity:1.5;
+}
+
+nav{
+    width: 1000px;
+    margin:0 auto;
+}
+.private{
+    margin-left:auto;
+    width: 150px;
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-menu{
+    margin: 0 auto;
+    padding:10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+}
+
+
+.slides img{
+    width: 1000px;
+}
