@@ -1,0 +1,13 @@
+VSCODE
+
+설치한 라이브러리
+live server
+vscode_icons
+jupyter
+java
+python
+excel viewer
+image preview
+korean
+tab out
+
