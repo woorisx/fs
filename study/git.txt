@@ -13,6 +13,10 @@ git config --global user.email "suhwooree@gmail.com"
 
 git clone https://github.com/woorisx/fs.git
 
+Authentication 깃허브 비밀번호 재입력하면
+Authentication Succeeded
+You may now close this tab and return to the application.
+
 ==업로드==
 git add .
 git commit -m "테스트"
