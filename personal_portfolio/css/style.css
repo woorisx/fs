@@ -5,37 +5,47 @@
     margin:0;
     padding:0;
     list-style: none;
-    text-decoration: none;
+
 }
 
 a:link{
     color: #333;
+    text-decoration: none;
 }
 
 header{
 
 }
-
+.bar{
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
 .logo{
-    margin:10px auto;
-    width: 200px;
+    width: 100px;
     height: 100px;
-    background-image: url(../images/logo-bg.jpg);
+    background-image: url(../images/logo_bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    line-height: 100px;
+    line-height:100px;
     text-align: center;
     font-size: 30px;
     color: rgb(200 , 55, 150);
     text-shadow: 2px 2px 1px #222;
-    border-radius: 10px;
     opacity:1.5;
+    border-bottom:1px dashed black;
+    filter: brightness(0.8);
 }
 
-nav{
-    width: 1000px;
-    margin:0 auto;
+.menu{
+   width:100%;
+}
+.letter{
+    padding: 10px;
+    height: 50px;
+    text-align: center;
 }
 .private{
     margin-left:auto;
@@ -46,24 +56,41 @@ nav{
 }
 
 .main-menu{
-    margin: 0 auto;
+    margin-bottom: 0;
     padding:10px;
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     background-color: #ddd;
+    border-bottom: 1px dashed black;
+    line-height: 25px;
 }
 
-
-.carousel-inner{
+.carouselsize{
     width: 1000px;
-    height:500px;
-    overflow: hidden;    
+    margin:0 auto;
 }
 
-.item1{
-    background-image: url(../images/slide1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.carousel-item{
+    width: 100%;
+    height: 400px;
+
 }
+.carousel-item img{
+    width: 100%;
+    height: 600px;
+    filter: brightness(0.9);
+}
+/* .carousel-item.item1{
+    background-image: url(../images/slide1.jpg);
+}
+.carousel-item.item2{
+    background-image: url(../images/slide2.jpg);
+}
+.carousel-item.item3{
+    background-image: url(../images/slide3.jpg);
+}
+.carousel-item.item4{
+    background-image: url(../images/slide4.jpg);
+} */
