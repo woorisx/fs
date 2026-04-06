@@ -120,9 +120,6 @@ header{
     padding: 50px;
 
 }
-.content{
-    margin: 50px;
-}
 
 .middle-line{
    width: 100%;
@@ -144,24 +141,54 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
 }
+.content{
+    margin: 50px;
+    padding:30px;
+}
 
 footer{
     width: 100%;
-    background-color: #bbb;
+    background-color: #333;
     padding: 20px;
+    color:#fff;
 }
 footer > .contact{
     padding: 10px;
-    width: 400px;
+    margin:30px;
+    width: 500px;
     margin:0 auto;
 }
 
-footer > .contact > li > label{
+footer > .info > .contact > li > label{
     width: 100px;
     text-align: center;
+    
 }
 footer p{
     margin:0 auto;
     padding:5px;
     width: 400px;
+}
+
+footer .info{
+    width: 700px;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer .sns{
+    margin: 30px;
+    width: 25%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .info .sns .snsimg img{
+    width: 50px;
+    height:50px
+}
+
+footer .x{
+
 }
