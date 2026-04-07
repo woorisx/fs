@@ -26,4 +26,50 @@ git push -u origin main
 서버에서 다운로드는 풀
 git pull origin main
 
+==로그인==
+## 2. GitHub 로그인
 
+내 컴퓨터의 터미널(CLI)과 깃허브 계정을 안전하게 연결(인증)
+
+bash
+gh auth login
+
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: 1503-BE6A
+Press Enter to open https://github.com/login/device in your browser...
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as fsclass-n
+PS D:\git\py2026>
+
+
+git bash (원하는 디렉토리 우클릭후 실행)
+
+dir
+
+mkdir gittest
+
+cd gittest
+
+git init
+
+git branch -m master main
+
+> gh repo create gittest -public --source=. --push(처음엔 안씀, 올릴파일이 없기때문)
+* repo : repository
+
+gh repo create gittest --public --source=.
+
+
+
+
+==cmd==
+
+디렉토리생성 후
+디렉토리> gh auth refresh -h github.com -s delete_repo
+gh repo delete woorisx/gittest --yes
