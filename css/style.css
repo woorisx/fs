@@ -28,12 +28,24 @@ a:link, a:visited{
     border: 0;
 }
 header{
-
+position:relative;
+}
+nav{
+    width: 100%;
+    border-bottom: 1px dashed black;
+    background-color: #ddd; 
+}
+.menuFixed{
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translate(-50%, 0);
+    z-index: 99999;
 }
 .bar{
     margin: 0 auto;
     width: 1000px;
-    display: flex;
+    display:flex;
     justify-content: space-between;
 }
 .logo{
@@ -49,15 +61,15 @@ header{
     color: rgb(200 , 55, 150);
     text-shadow: 2px 2px 1px #222;
     opacity:1.5;
-    border-bottom:1px dashed black;
-    filter: brightness(0.8);
+    filter: brightness(0.9);
 }
-nav{
-    background-color: #ddd;
-    border-bottom: 1px dashed black;
+.menuWrap{
+    
 }
+
 .menu{
-   width:100%;
+   margin: 0 auto;
+   width:1000px;
 }
 .letter{
     color: #fff;
