@@ -48,3 +48,28 @@ Press Enter to open https://github.com/login/device in your browser...
 PS D:\git\py2026>
 
 
+git bash (원하는 디렉토리 우클릭후 실행)
+
+dir
+
+mkdir gittest
+
+cd gittest
+
+git init
+
+git branch -m master main
+
+> gh repo create gittest -public --source=. --push(처음엔 안씀, 올릴파일이 없기때문)
+* repo : repository
+
+gh repo create gittest --public --source=.
+
+
+
+
+==cmd==
+
+디렉토리생성 후
+디렉토리> gh auth refresh -h github.com -s delete_repo
+gh repo delete woorisx/gittest --yes
