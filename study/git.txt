@@ -10,7 +10,7 @@ git --version
 
 git config --global user.name "woorisx"
 git config --global user.email "suhwooree@gmail.com"
-
+//git 개인인증정보는 window에 내부에 저장됨
 git clone https://github.com/woorisx/fs.git
 
 Authentication 깃허브 비밀번호 재입력하면
@@ -73,3 +73,10 @@ gh repo create gittest --public --source=.
 디렉토리생성 후
 디렉토리> gh auth refresh -h github.com -s delete_repo
 gh repo delete woorisx/gittest --yes
+
+
+
+==깃허브데스크탑==
+
+삭제는 서버에서
+생성은 로컬에서 먼저
