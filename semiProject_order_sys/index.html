@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1조마트에 오신 것을 환영합니디.</title>
+    <script src="js/jquery-4.0.0.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+
+    function play(){
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+
+       
+    }
+
+
+</script>
+</head>
+<body>
+    <div id="martWrap">
+        <header>
+            <div class="bar">
+                <div class="logo">1조마트</div>
+                <ul class="private">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#" onclick="showSubMenu()">분노의배송</a>
+                        <ul id="subMenu" class="sub">
+                            <li><a href="#">당일</a></li>
+                            <li><a href="#">익일</a></li>
+                            <li><a href="#">직구</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제철재료</a></li>
+                    <li><a href="#">기본재료</a></li>
+                    <li><a href="#">밀키트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Slider main container -->
+            <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide1">
+                    <img src="images/slide1.jpg">
+                </div>
+                <div class="swiper-slide slide2">
+                    <img src="images/slide2.jpg">
+                </div>
+                <div class="swiper-slide slide3">
+                    <img src="images/slide3.jpg">
+                </div>
+                
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            </div>
+            <section>
+                <div class="todaySpecial"></div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>
