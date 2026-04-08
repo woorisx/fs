@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1조마트에 오신 것을 환영합니디.</title>
     <script src="js/jquery-4.0.0.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/item.css">
 <script>
 
     function play(){
@@ -57,15 +54,34 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <a href="#" onclick="showSubMenu()">분노의배송</a>
+                        <a href="#">분노의배송<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg></a>
                         <ul id="subMenu" class="sub">
                             <li><a href="#">당일</a></li>
                             <li><a href="#">익일</a></li>
                             <li><a href="#">직구</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">제철재료</a></li>
-                    <li><a href="#">기본재료</a></li>
+                    <li>
+                        <a href="#">제철재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg></a>
+                        <ul id="subMenu" class="sub">
+                            <li><a href="#">나물</a></li>
+                            <li><a href="#">해산물</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기본재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg></a>
+                        <ul id="subMenu" class="sub">
+                            <li><a href="#">국거리</a></li>
+                            <li><a href="#">조림</a></li>
+                            <li><a href="#">콩</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">밀키트</a></li>
                 </ul>
             </nav>
@@ -100,8 +116,93 @@
             <section>
                 <div class="todaySpecial"></div>
             </section>
-            
+            <section>
+                <!-- 상품목록 -->
+                <div class="basic-ingredients">
+                <div class="title"><a href="#">기본재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg></a></div>
+                <div class="item-list">
+                    <!-- 상품 반복 -->
+                    <div class="item-box">
+                        <div class="item">
+                            <div class="item-img"></div>
+                            <div class="item-info">
+                                <a href="#">대파 10개 묶음, 대파, 허브</a>
+                                <a href="#">5000원</a>
+                                <a href="#">조건무료배송</a>
+                            </div>
+                            <div class="item-review"></div>
+                         </div>
+                    </div>
+
+
+                    <!-- 상품 반복 -->
+                    <div class="item-box">
+                        <div class="item">
+                            <div class="item-img"></div>
+                            <div class="item-info">
+                                <a href="#">대파 10개 묶음, 대파, 허브</a>
+                                <a href="#">5000원</a>
+                                <a href="#">조건무료배송</a>
+                            </div>
+                            <div class="item-review"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 상품 반복 -->
+                    <div class="item-box">
+                        <div class="item">
+                            <div class="item-img"></div>
+                            <div class="item-info">
+                                <a href="#">대파 10개 묶음, 대파, 허브</a>
+                                <a href="#">5000원</a>
+                                <a href="#">조건무료배송</a>
+                            </div>
+                            <div class="item-review"></div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 반복 -->
+                    <div class="item-box">
+                        <div class="item">
+                            <div class="item-img"></div>
+                            <div class="item-info">
+                                <a href="#">대파 10개 묶음, 대파, 허브</a>
+                                <a href="#">5000원</a>
+                                <a href="#">조건무료배송</a>
+                            </div>
+                            <div class="item-review"></div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 반복 -->
+                    <div class="item-box">
+                        <div class="item">
+                            <div class="item-img"></div>
+                            <div class="item-info">
+                                <a href="#">대파 10개 묶음, 대파, 허브</a>
+                                <a href="#">5000원</a>
+                                <a href="#">조건무료배송</a>
+                            </div>
+                            <div class="item-review"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                
+            </section>
         </main>
     </div>
+    <footer>
+        <ul class="contact">
+            <li><a href="#">대표전화 1111-0000</a></li>
+            <li><a href="#">고객상담 080-0000-0000</a></li>
+            <li><a href="#">프리미엄 070-0001-0001</a></li>
+        </ul>
+        <div class="copy">&copy; copyright 2026 1조마트 All rights reserved.</div>
+
+    </footer>
 </body>
 </html>
