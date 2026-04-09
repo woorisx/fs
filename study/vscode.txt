@@ -10,6 +10,7 @@ excel viewer
 image preview
 korean
 tab out
+git graph
 
 ======터미널======
 터미널 > 새 터미널 ->파워쉘 -> +꺽쇠클릭 -> 기본프로필선택 -> git bash 선택 (새로열리는 터미널은 git bash가 실행됨)
