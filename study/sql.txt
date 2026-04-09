@@ -1,0 +1,78 @@
+https://velog.io/@pppp0722/%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8-%EC%8B%A4%EB%A6%AC%EC%BD%98%EB%B0%B8%EB%A6%AC%EC%97%90%EC%84%9C-%EB%82%A0%EC%95%84%EC%98%A8-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%A0%95%EB%A6%AC
+
+
+SQL DDL - 테이블 구조 정의 언어
+CREATE TABLE
+Primary key 속성을 지정할 수 있음
+Primary key uniqueness: 기본 키 보장
+성능향상을 위해 인덱스를 지정할 수 있음
+CREATE TABLE raw_Data.user_session_channel(
+    user int,
+    sessionid varchar(32) primary key,
+    channel varchar(32)
+);
+
+DROP TABLE
+DROP TABLE table_name;
+없는 테이블을 지우려고 하는 경우 에러를 냄
+DROP TABLE IF EXISTS table_name;
+vs DELETE FROM
+DELETE FROM은 조건에 맞는 레코드들을 지움 (테이블 자체는 존재)
+
+ALTER TABLE
+새로운 컬럼 추가
+ALTER TABLE 테이블이름 ADD COLUMN 필드이름 필드타입;
+기존 컬럼 이름 변경
+ALTER TABLE 테이블이름 RENAME 현재필드이름 to 새필드이름;
+기존 컬럼 제거
+ALTER TABLE 테이블이름 DROP COLUMN 필드이름;
+테이블 이름 변경
+ALTER TABLE 현재테이블이름 RENAME to 새테이블이름;
+
+SQL DML - 테이블 데이터 조작 언어
+SELECT
+SELECT FROM
+테이블에서 레코드와 필드를 읽어오는데 사용
+WHERE를 사용해서 레코드 선택 조건을 지정
+GROUP BY
+정보를 그룹 레벨에서 뽑는데 사용
+DAU, WAU, MAU 계산은 GROUP BY를 필요로 함
+ORDER BY를 사용해서 레코드 순서를 결정하기도 함
+보통 다수의 테이블에 조인해서 사용하기도 함
+
+레코드 추가/삭제/수정
+INSERT INTO
+테이블에 레코드를 추가하는데 사용
+UPDATE FROM
+테이블 레코드의 필드 값 수정
+DELETE FROM
+테이블에서 레코드를 삭제
+TRUNCATE는 조건 없이 모든 레코드 삭제
+
+MySQL 역사
+1995년 스웨덴 회사였던 MySQL AB에 의해 개발된 관계형 데이터베이스
+오픈소스로 시작됨
+My는 개발자 중 한 사람의 딸 이름이었음
+2008년 썬 마이크로시스템이 MySQL AB를 $1B를 주고 인수
+2009년 오라클이 썬을 인수하면서 MySQL이 유료화 여부가 쟁점이 됨
+2010년 MySQL의 처음 개발자였던 Monty가 MySQL과 호환이 되는 MariaDB라는 오픈소스 개발
+
+MySQL 종류와 버전
+MariaDB
+오픈소스
+MySQL 5.5에 기반해서 개발됨
+MySQL과 인터페이스는 동일하나 성능은 더 좋음
+MySQL
+두 가지 종류가 존재
+MySQL Community Server: 오픈소스
+MySQL Enterprise Server: 유료 버전, 다양한 플러그인 제공
+최신 버전은 8.0
+
+MySQL 특징
+한동안 웹개발 표준 기술 스택 중 하나였음
+LAMP: Linux, Apache, MySQL, PHP
+지금도 PostgreSQL와 함께 가장 널리 쓰이는 프로덕션용 관계형 데이터베이스
+용량 증대(Scaling) 방식
+Scale-Up: 서버에 CPU와 Memory 추가
+Scale-Out: Master-Slave 구성
+일반적으로 클러스터 구성을 이야기하지만 MySQL은 이를 지원하지 못함
