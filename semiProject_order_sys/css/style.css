@@ -109,9 +109,7 @@ ul.sub > li:hover{
     position: relative;
     z-index: 1; /* 낮은 숫자 설정 */
 }
-.show{
-    display: block;
-}
+
 .swiper {
     width: 1000px;
     height: 400px;
