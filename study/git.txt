@@ -2,8 +2,8 @@
 git clone https://github.com/woorisx/fs.git
 
 
-
-
+깃이그노어 만들기
+https://www.toptal.com/developers/gitignore/
 =======================
 
 git --version
