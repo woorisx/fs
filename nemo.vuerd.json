@@ -5,11 +5,11 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollLeft": -2.2218,
     "zoomLevel": 1,
     "show": 431,
     "database": 4,
-    "databaseName": "",
+    "databaseName": "nemo",
     "canvasType": "ERD",
     "language": 1,
     "tableNameCase": 4,
@@ -30,16 +30,120 @@
     "ignoreSaveSettings": 0
   },
   "doc": {
-    "tableIds": [],
+    "tableIds": [
+      "w8jSxTTWNjAs7OPLfF2lG"
+    ],
     "relationshipIds": [],
     "indexIds": [],
     "memoIds": []
   },
   "collections": {
-    "tableEntities": {},
-    "tableColumnEntities": {},
+    "tableEntities": {
+      "w8jSxTTWNjAs7OPLfF2lG": {
+        "id": "w8jSxTTWNjAs7OPLfF2lG",
+        "name": "Users",
+        "comment": "회원",
+        "columnIds": [
+          "KlrMqfYJDZIus_FtSqs_E",
+          "Ty6VjVjZWKLidC4NTG46J",
+          "cjsUWmMWq2CayPLlfAvPe"
+        ],
+        "seqColumnIds": [
+          "KlrMqfYJDZIus_FtSqs_E",
+          "Ty6VjVjZWKLidC4NTG46J",
+          "cjsUWmMWq2CayPLlfAvPe"
+        ],
+        "ui": {
+          "x": 202.2218,
+          "y": 100,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1775785735994,
+          "createAt": 1775785541907
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "KlrMqfYJDZIus_FtSqs_E": {
+        "id": "KlrMqfYJDZIus_FtSqs_E",
+        "tableId": "w8jSxTTWNjAs7OPLfF2lG",
+        "name": "userId",
+        "comment": "회원아이디",
+        "dataType": "varchar(30)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 62,
+          "widthDataType": 61,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1775785693580,
+          "createAt": 1775785546178
+        }
+      },
+      "Ty6VjVjZWKLidC4NTG46J": {
+        "id": "Ty6VjVjZWKLidC4NTG46J",
+        "tableId": "w8jSxTTWNjAs7OPLfF2lG",
+        "name": "userPwd",
+        "comment": "회원비밀번호",
+        "dataType": "varchar(200)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 74,
+          "widthDataType": 67,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1775785726810,
+          "createAt": 1775785599674
+        }
+      },
+      "cjsUWmMWq2CayPLlfAvPe": {
+        "id": "cjsUWmMWq2CayPLlfAvPe",
+        "tableId": "w8jSxTTWNjAs7OPLfF2lG",
+        "name": "userName",
+        "comment": "",
+        "dataType": "varchar(20)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 61,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1775785765231,
+          "createAt": 1775785735994
+        }
+      }
+    },
     "relationshipEntities": {},
-    "indexEntities": {},
+    "indexEntities": {
+      "PcF5e10YaXV4m7AnW5dgd": {
+        "id": "PcF5e10YaXV4m7AnW5dgd",
+        "name": "",
+        "tableId": "w8jSxTTWNjAs7OPLfF2lG",
+        "indexColumnIds": [],
+        "seqIndexColumnIds": [],
+        "unique": false,
+        "meta": {
+          "updateAt": 1775785618514,
+          "createAt": 1775785618514
+        }
+      }
+    },
     "indexColumnEntities": {},
     "memoEntities": {}
   }
