@@ -1,4 +1,4 @@
-피그마 주소 : htt          ps://www.figma.com/design/XvnmqAsFxyv0a343COhrU3/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-2&t=7yBoid1FSvYfbTiT-1
+피그마 주소 : https://www.figma.com/design/XvnmqAsFxyv0a343COhrU3/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-2&t=7yBoid1FSvYfbTiT-1
 
 프레임 크기 : 1440*1024
 
@@ -27,3 +27,8 @@ Naver Blog
  +4
 3. 추가 개념: 반정형 데이터 (Semi-structured Data) 
 데이터베이스의 정형 구조는 아니지만, 구조를 나타내는 메타데이터(태그 등)를 포함하여 분석이 가능한 데이터입니다.
+
+
+파이썬 함수
+딕셔너리
+튜플

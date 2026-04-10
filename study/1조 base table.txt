@@ -1,0 +1,33 @@
+
+
+B2B ORDER
+
+Create table orderBuisness(
+	orderNumber int	not null auto-increment   comment'발주번호' primary key,
+	orderDateTime	Date	not null	comment'발주일시',
+	id	varchar(12)	not null	 comment'아이디',
+	itemId	int	not null 	auto-increment	comment'상품아이디',
+	orderQuantity	int	not null	comment'수량',
+	orderDeliveryFee	int	not null	comment'배송비',
+	foreign key (id) references users(id),
+	foreign key (itemId) references Items(itemId)
+)comment'발주'
+
+
+Create Table Items(
+	itemId	int	not null 	auto-increment	comment'상품아이디',
+	itemName   varchar(100)	not null	 comment'상품이름',
+	itemPrice	    int	not null	comment'가격',
+	itemImageUrl	varchar(200)	not null 	comment'이미지URL',
+	itemLink		varchar(200)	not null	comment'상품링크',
+	Primary Key(itemId)
+) comment'상품'
+
+Create Table Users(
+	id	varchar( 12)	not null   comment'회원아이디',
+	pwd	varchar(20)	not null	comment'회원비밀번호',
+	email	varchar(100)	not null	comment'이메일주소',
+	phone	varchar(15)	not null	comment'휴대전화번호',
+	name	varchar(15)	not null	comment'이름',
+	Primary Key(id)
+)comment'회원'

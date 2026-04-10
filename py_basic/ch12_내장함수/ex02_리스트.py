@@ -72,5 +72,4 @@ print(a)
 a = [1, 2, 3]
 a = [10, 5, 31]
 print(a.index(31)) # 3이 몇번째 인덱스인가
-print(a.index(5)) 
-
+print(a.index(5))
