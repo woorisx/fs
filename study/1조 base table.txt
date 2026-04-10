@@ -31,3 +31,47 @@ Create Table Users(
 	name	varchar(15)	not null	comment'이름',
 	Primary Key(id)
 )comment'회원'
+
+
+==================================================변경
+
+
+create database DB명;
+use DB명;
+
+/* 테이블은 한번에 하나씩 생성 
+한 번에 하나씩 실행하는 이유 = 보안 + 안정성 + 의존성 관리
+TiDB는 기본적으로 multi-statement 차단
+*/
+
+Create Table Users(
+id	char( 12)	not null   comment'회원아이디',
+pwd    char(20)	not null	comment'회원비밀번호',
+email	varchar(100)	not null	comment'이메일주소',
+phone	varchar(15)	not null	comment'휴대전화번호',
+name	varchar(15)	not null	comment'이름',
+Primary Key(id)
+)comment'회원';
+
+
+CREATE TABLE Items (
+    itemId INT AUTO_INCREMENT COMMENT '상품아이디',
+    itemName VARCHAR(100) NOT NULL COMMENT '상품이름',
+    itemPrice INT NOT NULL COMMENT '가격',
+    itemImageUrl VARCHAR(200) NOT NULL COMMENT '이미지URL',
+    itemLink VARCHAR(200) NOT NULL COMMENT '상품링크',
+    PRIMARY KEY (itemId)
+) COMMENT='상품';
+
+
+CREATE TABLE orderBusiness (
+    orderNumber INT NOT NULL AUTO_INCREMENT COMMENT '발주번호',
+    orderDateTime DATE NOT NULL COMMENT '발주일시',
+    id CHAR(12) NOT NULL COMMENT '아이디',
+    itemId INT NOT NULL COMMENT '상품아이디',
+    orderQuantity INT NOT NULL COMMENT '수량',
+    orderDeliveryFee INT NOT NULL COMMENT '배송비',
+    PRIMARY KEY (orderNumber),
+    FOREIGN KEY (id) REFERENCES users(id),
+    FOREIGN KEY (itemId) REFERENCES Items(itemId)
+) COMMENT='발주';

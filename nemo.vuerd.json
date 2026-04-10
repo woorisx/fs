@@ -30,9 +30,7 @@
     "ignoreSaveSettings": 0
   },
   "doc": {
-    "tableIds": [
-      "w8jSxTTWNjAs7OPLfF2lG"
-    ],
+    "tableIds": [],
     "relationshipIds": [],
     "indexIds": [],
     "memoIds": []
@@ -54,15 +52,15 @@
           "cjsUWmMWq2CayPLlfAvPe"
         ],
         "ui": {
-          "x": 202.2218,
-          "y": 100,
+          "x": 66.2218,
+          "y": 362,
           "zIndex": 2,
           "widthName": 60,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1775785735994,
+          "updateAt": 1775797680805,
           "createAt": 1775785541907
         }
       }
