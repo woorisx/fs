@@ -72,7 +72,7 @@ function typing() {
         }
         
         i++;
-        setTimeout(typing, 100);
+        setTimeout(typing, 30);
     
         } 
 }
