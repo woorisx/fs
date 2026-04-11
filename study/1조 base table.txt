@@ -45,13 +45,13 @@ TiDB는 기본적으로 multi-statement 차단
 */
 
 Create Table Users(
-id	char( 12)	not null   comment'회원아이디',
-pwd    char(20)	not null	comment'회원비밀번호',
-email	varchar(100)	not null	comment'이메일주소',
-phone	varchar(15)	not null	comment'휴대전화번호',
-name	varchar(15)	not null	comment'이름',
-Primary Key(id)
-)comment'회원';
+	id	char( 12)	not null   comment'회원아이디',
+	pwd    char(20)	not null	comment'회원비밀번호',
+	email	varchar(100)	not null	comment'이메일주소',
+	phone	varchar(15)	not null	comment'휴대전화번호',
+	name	varchar(15)	not null	comment'이름',
+	Primary Key(id)
+	)comment'회원';
 
 
 CREATE TABLE Items (

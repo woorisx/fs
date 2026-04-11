@@ -15,6 +15,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div id="container">
     <header>
         <nav>
         <div class="bar">
@@ -38,7 +39,7 @@
 
     </header>
     <main>
-        <section>
+        <section id="slide">
             <div class="carouselsize">
            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -71,46 +72,66 @@
             </button>
             </div>
             </div>
-        </section>
-        <section>
-
+            <div class="poem">
+                <img src="/fs/images/hitech.jpg">
+                <div class="poemBox">
+                    <pre class="typed">
+                        그렇지 않고 어떻게 텅 빈 화폭에서 그림을 볼 수 있겠는가.
+                        어떻게 침묵 속에 앉아
+                        결코 씌어진 적이 없는 노래를 들을 수 있겠는가.
+                        또는 붉은 행성들을 응시하면서 우주 정거장을 떠올릴 수 있겠는가
+                        
+                        어떤 사람들은 그들을 미치광이라 부르지만,
+                        우리는 그들을 천재라고 부른다.
+                        세상을 바꿀 수 있다고 생각할 만큼 미친 사람들만이
+                        결국 세상을 바꿀 수 있기 때문에.
+                        
+                        어느 고등학교 교사가 썼다고 전해지는 이 시는
+                        애플 컴퓨터 사의 텔레비전 광고에 사용되었다.</pre>
+                    <span id="text"></span>
+                </div>
+                
+               
+                
+                
+            </div>
             
         </section>
+        
         <section id="profile">
-            <div class="intro">
+            
+            <div class="wrap">
                 
-                <div class="wrap">
-                    <img src="images/flower.jpg">
-                    <ul class="content" >
-                        <li><h3>서우리</h3></li> 
-                        <li><label>교육이수</label></li>
-                        <li><span>2021년 5월~ 11월</span> UI/UX 개발자 과정 (970h)</li>
-                        <li><span>2024년 7월~ 12월</span> 프로젝트기반 풀스택 개발자 과정 (950h)</li>
-                        <li><label>기술경험</label></li>
-                        <li>스프링, 스프링부트, 부트스트랩, JSP, SERVLET, MYBATIS, JSTL, EL, MYSQL, JAVA</li>
-                        <li><label>툴즈</label></li>
-                        <li>Photoshop, Illustrator, STS4, eclipse, VSCODE, IntelliJ 등</li>
-                        <li><label>학력</label></li>
-                        <li><span>2003년</span> 한솔고등학교 졸업</li>
-                        <li><span>2009년</span> 한국외국어대학교 폴란드어과 학사 졸업</li>
-                    </ul>
-                </div>
+                <ul class="content" >
+                    <li><h3>서우리</h3></li> 
+                    <li><label>교육이수</label></li>
+                    <li><span>2021년 5월~ 11월</span> UI/UX 개발자 과정 (970h)</li>
+                    <li><span>2024년 7월~ 12월</span> 프로젝트기반 풀스택 개발자 과정 (950h)</li>
+                    <li><label>기술경험</label></li>
+                    <li>파이썬, 스프링, 스프링부트, 부트스트랩, JSP, SERVLET, MYBATIS, JSTL, EL, MYSQL, JAVA</li>
+                    <li><label>툴즈</label></li>
+                    <li>Photoshop, Illustrator, STS4, eclipse, VSCODE, IntelliJ, Pycharm 등</li>
+                    <li><label>학력</label></li>
+                    <li><span>2003년</span> 한솔고등학교 졸업</li>
+                    <li><span>2009년</span> 한국외국어대학교 폴란드어과 학사 졸업</li>
+                </ul>
+                <img src="images/flower.jpg">
             </div>
-                <div class="middle-line">
-                    <p>꿈이여, 이루어져라!</p>
-                    <div class="mid-img"></div>
-                </div>
-                <div class="intro">
-                <div class="wrap">
-                    <ul class="content portfolio" id="project">
-                        <li><h3>프로젝트 목록</h3></li>
-                        <li><span>2021년</span>&nbsp;&nbsp;<a href="https://woorisx.github.io/portfolio" target="_blank">개인 포트폴리오</a></li>
-                        <li><span>2024년</span>&nbsp;&nbsp;<a href="https://woorisx02.github.io/BB/1" target="_blank">bookbug test 버전</a></li>
-                        <li><span>2024년</span>&nbsp;&nbsp;<a href="http://woorisx.cafe24.com" target="_blank">bookbug final 버전</a></li>
-                    </ul>
-                    <img src="images/dream.jpg">
-                </div>
-          </div>
+            
+        </section>
+              
+        <section  id="project">
+            <div class="wrap">
+                <img src="images/dream.jpg">
+                <ul class="content portfolio">
+                    <li><h3>프로젝트 목록</h3></li>
+                    <li><span>2021년</span>&nbsp;&nbsp;<a href="https://woorisx.github.io/portfolio" target="_blank">개인 포트폴리오</a></li>
+                    <li><span>2024년</span>&nbsp;&nbsp;<a href="https://woorisx02.github.io/BB/1" target="_blank">bookbug test 버전</a></li>
+                    <li><span>2024년</span>&nbsp;&nbsp;<a href="http://woorisx.cafe24.com" target="_blank">bookbug final 버전</a></li>
+                </ul>
+                
+            </div>
+          
         </section>
         <button id="topbutton"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
   <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
@@ -132,10 +153,18 @@
             <div class="band snsimg"><img src="images/sns_band.png" alt=""></div>
         </div>
     </div>
-    
+    <div class="git-repository">
+        <h3>깃허브 소스 코드</h3>
+        <p><label>개인프로필</label><a href="https://github.com/woorisx/fs" target="_blank">github.com/woorisx/fs</a></p>
+        <p><label>세미프로젝트</label><a href="https://github.com/woorisx/fs/semiProject" target="_blank">github.com/woorisx/fs/semiProject</a></p>
+        <p><label>UIUX개발자과정</label><a href="https://github.com/woorisx/portfolio" target="_blank">github.com/woorisx/portfolio</a></p>
+        <p><label>풀스택개발자과정파이널</label><a href="https://github.com/woorisx02/BB/test" target="_blank">github.com/woorisx02/BB/test</a></p>
+        <p><label>1 : </label><a href="https://github.com/woorisx02/BB/1" target="_blank">github.com/woorisx02/BB/1</a></p>
+        <p><label>2 : </label><a href="https://github.com/woorisx02/BB/2" target="_blank">github.com/woorisx02/BB/2</a></p>
+    </div>
    <p> copyright&copy; 2026 서우리 All rights reserved.</p>
 
 </footer>
-
+</div>
 </body>
 </html>
