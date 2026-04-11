@@ -9,6 +9,11 @@ $(document).ready(function(){
         }
     })
 });
+
+
+
+
+
 var backToTop = () =>{
     
     //scroll
@@ -37,25 +42,38 @@ var scrollPageEvent = () =>{
     let scrollPosition=0
     const bodyObject = document.querySelector('#container');
     const sections = document.querySelectorAll('section').length;
-
-    bodyObject.addEventListener('wheel', function(e){
-        e.preventDefault();
-        if(e.deltaY < 0){
-            //위로
-            if(pageCount<=0) return;
+        bodyObject.addEventListener('wheel', function(e){
+            e.preventDefault();
+            if(e.deltaY < 0){
+                //위로
+                if(pageCount<=0) return;
                 pageCount--;
-        }
-        if(e.deltaY > 0){
-            //아래로
-            if(pageCount >= 3) return;
-            pageCount++;
-        }
-        scrollPosition = pageCount * window.innerHeight;
-        window.scrollTo({letf:0, top:scrollPosition, behavior:"smooth"})
+            }
+            if(e.deltaY > 0){
+                //아래로
+                if(pageCount >= 3) return;
+                pageCount++;
 
+            }
+            scrollPosition = pageCount * window.innerHeight;
+            window.scrollTo({left:0, top:scrollPosition, behavior:"smooth"})
+            
+            const aObj = document.querySelectorAll(".main-menu > li > a");
+            const fixedObj = document.querySelector(".fixed");
+                fixedObj.classList.remove("fixed");
+                aObj[pageCount].classList.add("fixed");
 
-    },{passive:false})
-};
+            aObj.forEach((item, index)=>{
+                item.addEventListener('click', function(){
+                    aObj.forEach(menu =>{
+                        menu.classList.remove('fixed');
+                    })
+                    item.classList.add("fixed");
+                    
+                })
+            })
+        },{passive:false})
+    };
 
 
 const textElement = document.getElementById('text');

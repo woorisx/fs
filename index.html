@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,68 +15,74 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <div id="container">
-    <header>
-        <nav>
-        <div class="bar">
-            <div class="logo">SWR</div>
-        
-        
-            <!-- <ul class="private">
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-            </ul> -->
-            <div class="menuWrap">
-                <div class="letter"><marquee scrollAmount="10" behavior="alternate" direction="right">행복한 삶</marquee></div>
-                <ul class="main-menu">
-                    <li><a href="#profile">프로필</a></li>
-                    <li><a href="#project">프로젝트</a></li>
-                    <li><a href="#footer">컨택트</a></li>
-                </ul>
-            </div>
-        </div>
-        </nav>
+        <header>
+            <nav>
+                <div class="bar">
+                    <div class="menuWrap">
+                        <div class="letter">
+                            <marquee scrollAmount="10" behavior="alternate" direction="right">행복한 삶</marquee>
+                        </div>
+                        <ul class="main-menu">
+                            <li><a href="#" class="fixed">홈</a></li>
+                            <li><a href="#profile">프로필</a></li>
+                            <li><a href="#project">프로젝트</a></li>
+                            <li><a href="#footer">컨택트</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo"><a href="/">서우리</a></div>
+                </div>
+            </nav>
 
-    </header>
-    <main>
-        <section id="slide">
-            <div class="carouselsize">
-           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-          <div class="carousel-inner">
-                <div class="carousel-item item1 active" data-bs-interval="2000">
-                <img src="images/slide1.jpg" class="d-block w-100" alt="...">
+        </header>
+        <main>
+            <section id="slide" class="section">
+                <div class="carouselWrap">
+                    <div class="carouselSize">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item item1 active" data-bs-interval="2000">
+                                    <img src="images/slide1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" item2 data-bs-interval="2000">
+                                    <img src="images/slide2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item item3" data-bs-interval="2000">
+                                    <img src="images/slide3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item item4" data-bs-interval="2000">
+                                    <img src="images/slide4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item" item2 data-bs-interval="2000">
-                <img src="images/slide2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item item3" data-bs-interval="2000">
-                <img src="images/slide3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item item4" data-bs-interval="2000">
-                <img src="images/slide4.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            </div>
-            </div>
-            <div class="poem">
-                <img src="/fs/images/hitech.jpg">
-                <div class="poemBox">
-                    <pre class="typed">
+                <div class="poem">
+                    <img src="images/hitech.jpg">
+                    <div class="poemBox">
+                        <pre class="typed">
                         그렇지 않고 어떻게 텅 빈 화폭에서 그림을 볼 수 있겠는가.
                         어떻게 침묵 속에 앉아
                         결코 씌어진 적이 없는 노래를 들을 수 있겠는가.
@@ -88,83 +95,95 @@
                         
                         어느 고등학교 교사가 썼다고 전해지는 이 시는
                         애플 컴퓨터 사의 텔레비전 광고에 사용되었다.</pre>
-                    <span id="text"></span>
+                        <span id="text"></span>
+                    </div>
                 </div>
-                
-               
-                
-                
-            </div>
-            
-        </section>
-        
-        <section id="profile">
-            
-            <div class="wrap">
-                
-                <ul class="content" >
-                    <li><h3>서우리</h3></li> 
-                    <li><label>교육이수</label></li>
-                    <li><span>2021년 5월~ 11월</span> UI/UX 개발자 과정 (970h)</li>
-                    <li><span>2024년 7월~ 12월</span> 프로젝트기반 풀스택 개발자 과정 (950h)</li>
-                    <li><label>기술경험</label></li>
-                    <li>Python, SpringFramework, SpringBoot, BootStrap, JSP, SERVLET, MYBATIS, JSTL, EL, MYSQL, JAVA</li>
-                    <li><label>툴즈</label></li>
-                    <li>Photoshop, Illustrator, STS, eclipse, VSCODE, IntelliJ, Pycharm 등</li>
-                    <li><label>학력</label></li>
-                    <li><span>2003년</span> 한솔고등학교 졸업</li>
-                    <li><span>2009년</span> 한국외국어대학교 폴란드어과 학사 졸업</li>
-                </ul>
-                <img src="images/flower.jpg">
-            </div>
-            
-        </section>
-              
-        <section  id="project">
-            <div class="wrap">
-                <img src="images/dream.jpg">
-                <ul class="content portfolio">
-                    <li><h3>프로젝트 목록</h3></li>
-                    <li><span>2021년</span>&nbsp;&nbsp;<a href="https://woorisx.github.io/portfolio" target="_blank">개인 포트폴리오</a></li>
-                    <li><span>2024년</span>&nbsp;&nbsp;<a href="https://woorisx02.github.io/BB/1" target="_blank">bookbug test 버전</a></li>
-                    <li><span>2024년</span>&nbsp;&nbsp;<a href="http://woorisx.cafe24.com" target="_blank">bookbug final 버전</a></li>
-                </ul>
-                
-            </div>
-          
-        </section>
-        <button id="topbutton"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-  <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
-</svg></button>
-    </main>
-<footer id="footer">
-    <div class="info">
-        <ul class="contact">
-            <h3>연락처</h3>
-            <li><label>제작</label>서 우 리</li>
-            <li><label>전화번호</label>010-3708-5265</li>
-            <li><label>이메일</label>suhwooree@gmail.com</li>
-        </ul>
-        <div class="sns">
-            <div class="instagram snsimg"><img src="images/sns_instagram.png" alt=""></div>
-            <div class="x snsimg"><img src="images/sns_x.png" alt=""></div>
-            <div class="youtube snsimg"><img src="images/sns_youtube.png" alt=""></div>
-            <div class="faceabook snsimg"><img src="images/sns_facebook.png" alt=""></div>
-            <div class="band snsimg"><img src="images/sns_band.png" alt=""></div>
-        </div>
-    </div>
-    <div class="git-repository">
-        <h3>깃허브 소스 코드</h3>
-        <p><label><a href="https://woorisx.github.io/fs" target="_blank">개인프로필</a></label><a href="https://github.com/woorisx/fs" target="_blank">github.com/woorisx/fs</a></p>
-        <p><label><a href="https://woorisx.github.io/fs/semiProject" target="_blank">세미프로젝트</a></label><a href="https://github.com/woorisx/fs/tree/main/semiProject" target="_blank">github.com/woorisx/fs/tree/main/semiProject</a></p>
-        <p><label><a href="https://woorisx.github.io/portfolio" target="_blank">UI UX개발자과정</a></label><a href="https://github.com/woorisx/portfolio" target="_blank">github.com/woorisx/portfolio</a></p>
-        <p><label><a href="http://woorisx.cafe24.com" target="_blank">풀스택개발자과정파이널</a></label><a href="https://github.com/woorisx02/BB/tree/main/test" target="_blank">github.com/woorisx02/BB/tree/main/test</a></p>
-        <p><label><a href="https://woorisx02.github.io/BB/1" target="_blank">1 : </a></label><a href="https://github.com/woorisx02/BB/tree/main/1" target="_blank">github.com/woorisx02/BB/tree/main/1</a></p>
-        <p><label><a href="https://woorisx02.github.io/BB/2" target="_blank">2 : </a></label><a href="https://github.com/woorisx02/BB/tree/main/2" target="_blank">github.com/woorisx02/BB/tree/main/2</a></p>
-    </div>
-   <p> copyright&copy; 2026 서우리 All rights reserved.</p>
+            </section>
 
-</footer>
-</div>
+            <section id="profile" class="section">
+                <div class="wrap">
+                    <ul class="content">
+                        <h3>서우리</h3>
+                        <label>교육이수</label>
+                        <li><span>2021년 5월~ 11월</span> UI/UX 개발자 과정 (970h)</li>
+                        <li><span>2024년 7월~ 12월</span> 프로젝트기반 풀스택 개발자 과정 (950h)</li>
+                        <label>기술경험</label>
+                        <li>Python, SpringFramework, SpringBoot, BootStrap, JSP, MYBATIS, JSTL, EL, MYSQL, JAVA
+                        </li>
+                        <label>툴즈</label>
+                        <li>Photoshop, Illustrator, STS, eclipse, VSCODE, IntelliJ, Pycharm 등</li>
+                        <label>학력</label>
+                        <li><span>2003년</span> 한솔고등학교 졸업</li>
+                        <li><span>2009년</span> 한국외국어대학교 폴란드어과 학사 졸업</li>
+                    </ul>
+                    <img src="images/flower.jpg">
+                </div>
+
+            </section>
+
+            <section id="project" class="section">
+                <div class="wrap">
+                    <img src="images/dream.jpg">
+                    <ul class="content portfolio">
+                        <li>
+                            <h3>프로젝트 목록</h3>
+                        </li>
+                        <li><span>2021년</span>&nbsp;&nbsp;<a href="https://woorisx.github.io/portfolio"
+                                target="_blank">개인 포트폴리오</a></li>
+                        <li><span>2024년</span>&nbsp;&nbsp;<a href="https://woorisx02.github.io/BB/1"
+                                target="_blank">bookbug test 버전</a></li>
+                        <li><span>2024년</span>&nbsp;&nbsp;<a href="http://woorisx.cafe24.com" target="_blank">bookbug
+                                final 버전</a></li>
+                    </ul>
+
+                </div>
+
+            </section>
+            <button id="topbutton"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                    class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0" />
+                </svg></button>
+        </main>
+        <footer id="footer" class="section">
+            <div class="info">
+                <ul class="contact">
+                    <h3>연락처</h3>
+                    <li><label>제작</label>서 우 리</li>
+                    <li><label>전화번호</label>010-3708-5265</li>
+                    <li><label>이메일</label>suhwooree@gmail.com</li>
+                </ul>
+                <div class="sns">
+                    <div class="instagram snsimg"><img src="images/sns_instagram.png" alt=""></div>
+                    <div class="x snsimg"><img src="images/sns_x.png" alt=""></div>
+                    <div class="youtube snsimg"><img src="images/sns_youtube.png" alt=""></div>
+                    <div class="faceabook snsimg"><img src="images/sns_facebook.png" alt=""></div>
+                    <div class="band snsimg"><img src="images/sns_band.png" alt=""></div>
+                </div>
+            </div>
+            <div class="git-repository">
+                <h3>깃허브 소스 코드</h3>
+                <p><label><a href="https://woorisx.github.io/fs" target="_blank">개인프로필</a></label><a
+                        href="https://github.com/woorisx/fs" target="_blank">github.com/woorisx/fs</a></p>
+                <p><label><a href="https://woorisx.github.io/fs/semiProject" target="_blank">세미프로젝트</a></label><a
+                        href="https://github.com/woorisx/fs/tree/main/semiProject"
+                        target="_blank">github.com/woorisx/fs/tree/main/semiProject</a></p>
+                <p><label><a href="https://woorisx.github.io/portfolio" target="_blank">UI UX개발자과정</a></label><a
+                        href="https://github.com/woorisx/portfolio" target="_blank">github.com/woorisx/portfolio</a></p>
+                <p><label><a href="http://woorisx.cafe24.com" target="_blank">풀스택개발자과정파이널</a></label><a
+                        href="https://github.com/woorisx02/BB/tree/main/test"
+                        target="_blank">github.com/woorisx02/BB/tree/main/test</a></p>
+                <p><label><a href="https://woorisx02.github.io/BB/1" target="_blank">1 : </a></label><a
+                        href="https://github.com/woorisx02/BB/tree/main/1"
+                        target="_blank">github.com/woorisx02/BB/tree/main/1</a></p>
+                <p><label><a href="https://woorisx02.github.io/BB/2" target="_blank">2 : </a></label><a
+                        href="https://github.com/woorisx02/BB/tree/main/2"
+                        target="_blank">github.com/woorisx02/BB/tree/main/2</a></p>
+            </div>
+            <p> copyright&copy; 2026 서우리 All rights reserved.</p>
+
+        </footer>
+    </div>
 </body>
+
 </html>
