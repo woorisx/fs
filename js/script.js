@@ -8,6 +8,14 @@ $(document).ready(function(){
             $('nav').removeClass('menuFixed');
         }
     })
+
+
+    var typed = new Typed('#motto', {
+      strings: ['꿈이여, 이루어져라.', '&amp; Everyone deserves a second chance.'],
+      typeSpeed: 50,
+      backSpeed:50,
+      loop:true
+    });
 });
 
 
@@ -76,26 +84,19 @@ var scrollPageEvent = () =>{
     };
 
 
-const textElement = document.getElementById('text');
-const text = document.querySelector('.typed').innerHTML;
-let i = 0;
 
-function typing() {
-    if (i < text.length) {
-        // 줄바꿈 처리
-        if (text.charAt(i) === '\n') {
-            textElement.innerHTML += '<br>';
-        } else {
-            textElement.innerHTML += text.charAt(i);
-        }
-        
-        i++;
-        setTimeout(typing, 30);
-    
-        } 
-}
 
-typing();
+// const text = document.getElementById('h1').innerHTML;
+// const typingElement = document.getElementById("motto");
+// let index =0;
+// function type() {
+//     if (index < text.length) {
+//         typingElement.textContent += text.charAt(index);
+//         index++;
+//         setTimeout(type,150);// 0.15초 간격으로 반복
+//     }
+// }
+
+// type();
 backToTop();
 scrollPageEvent();
-typeWriter();
