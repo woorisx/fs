@@ -35,6 +35,10 @@ a:link, a:visited{
     cursor: pointer;
     outline: 0;
     border: 0;
+    transition: all 0.5s ease-in-out;
+}
+#topbutton:hover{
+    color: rgb(253, 4, 149);
 }
 header{
 position:relative;
@@ -130,15 +134,32 @@ nav{
     background-color: rgba(2, 85, 136, 0.577);
 }
 .carouselSize{
-    width: 1024px;
+    width: 100%;
     margin:0 auto 50px auto;
 }
-
+.carousel-indicators > .active{
+    width: 70px;
+}
 .carousel-item{
+    height: 350px;
     width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carousel-item.item1{
+    background-image: url(../images/photo_slide_ex01.jpg);
+}
+.carousel-item.item2{
+    background-image: url(../images/photo_slide2.jpg);
+}
+.carousel-item.item3{
+    background-image: url(../images/photo_slide_ex02.jpg);
+}
+.carousel-item.item4{
+    background-image: url(../images/photo_slide4.jpg);
 }
 .carousel-item img{
-    height: 400px;
     filter: brightness(0.9);
 }
 section{
@@ -148,7 +169,7 @@ section{
 }
 
 .poem{
-    width: 1000px;
+    width: 1024px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -215,24 +236,22 @@ section{
     background-color: #ddd;
 }
 .wrap{
-    width: 1000px;
+    width: 1024px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     
 }
 .wrap img{
-    width: 40%;
     height: 450px;
     filter: contrast(1.3) drop-shadow(10px 10px 30px #999);
 }
 
 .wrap > .content{
-    width: 60%;
     padding: 30px;
-    margin:0 50px;
+    margin-left: 30px;
     background-color: #fff;
-    border-radius: 50px;
+    border-radius: 30px;
     filter:drop-shadow(5px 5px 50px #999);
 }
 .wrap > .content > li > a{
@@ -247,6 +266,7 @@ section{
 .wrap > .record{
     word-break: break-all;
     text-align: justify;
+    margin-right: 30px;
 }
 .wrap > .record > .line, 
 .wrap > .portfolio > .line{
@@ -261,6 +281,7 @@ section{
     background-color: #ddd;
 }
 .wrap > .record > a{
+    padding:10px;
     display: inline-block;
     font-size: 18px;
     width: 100%;
@@ -293,14 +314,14 @@ section{
 }
 
 .portfolio{
+    width: 100%;
     text-align: center;
-    margin-top: 100px;
+    margin-left: 30px;
 }
 footer{
     width: 100%;
-    padding-top: 100px;
-    background-color: rgba(2, 85, 136, 0.577);
-    color:#333;
+    padding-top: 150px;
+    background-color: rgb(96, 158, 197);
     font-size: 20px;
 }
 
@@ -322,10 +343,17 @@ footer > .info > .contact > li > label{
 footer > p{
     margin:0 auto;
     padding:30px 0;
-    width: 400px;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    color:#bbb;
+    text-shadow: 1px 1px #333;
+    background-image:linear-gradient(to top,#333, rgb(96, 158, 197)) ;
 }
 footer .git-repository{
-    padding-bottom: 150px;    
+    padding-bottom: 100px;   
+    width: 1024px;
+    margin: 30px auto; 
 }
 footer .git-repository > p > a:hover{
     padding:5px;
@@ -333,8 +361,25 @@ footer .git-repository > p > a:hover{
     color:#fff;
     text-decoration: none;
 }
+footer .git-repository p{
+    width: 100%;
+}
+footer .git-repository p label{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: rgb(171, 207, 185);
+}
+footer > .git-repository > h5{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(119, 217, 241);
+}
+footer h3{
+    text-shadow: 1px 1px 1px #fff;
+}
 footer .info{
-    width: 1000px;
+    width: 1024px;
     margin:10px auto;
     display: flex;
     justify-content: space-between;
@@ -346,19 +391,6 @@ footer > .info > .contact > li > label{
     margin-top: 5px;
     margin-right: 10px;
     background-color: rgb(205, 207, 240);
-}
-footer .git-repository{
-    width: 1000px;
-    margin: 30px auto;
-}
-footer .git-repository p{
-    width: 100%;
-}
-footer .git-repository p label{
-    margin-top: 5px;
-    margin-right: 10px;
-    padding: 5px;
-    background-color: rgb(171, 207, 185);
 }
 footer .sns{
     margin: 30px;
