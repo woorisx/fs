@@ -5,6 +5,8 @@ live server
 vscode_icons
 jupyter
 java
+gladle
+language support for JAVA
 python
 excel viewer
 image preview
