@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/item.css">
 <script src="js/script.js" defer></script>
+<script src="js/itemDetail.js" defer></script>
+
 <body>
     <div id="martWrap">
         <header>
@@ -21,9 +24,11 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <a href="#">분노의배송<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-</svg></a>
+                        <a href="#">분노의배송<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></a>
                         <ul id="subMenu" class="sub">
                             <li><a href="#">당일</a></li>
                             <li><a href="#">익일</a></li>
@@ -31,18 +36,22 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">제철재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-</svg></a>
+                        <a href="#">제철재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></a>
                         <ul id="subMenu" class="sub">
                             <li><a href="#">나물</a></li>
                             <li><a href="#">해산물</a></li>
                         </ul>
                     </li>
                     <li>
-                       <a href="#">기본재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-</svg></a>
+                        <a href="#">기본재료<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></a>
                         <ul id="subMenu" class="sub">
                             <li><a href="#">국거리</a></li>
                             <li><a href="#">조림</a></li>
@@ -54,45 +63,48 @@
             </nav>
         </header>
         <main>
-        <div class="headImg"></div>
-        <div class="item-container">
-            <div class="item-detail">
-                <div class="ietm-detail-imgs">
-                    <img src="images/item1.jpg" alt="">
-                </div>
-                <div class="item-detail-info">
-                    
-                </div>
-                
-                <div class="item_detail_content">
-                    <h1>상품명: 대파 대파 대파</h1>
-                    <p>재료 양&nbsp;&nbsp;&nbsp;<select id="quantity" name="quantity">
-                        <option>선택</option>
-                        <option value="10">10개</option>
-                        <option value="30">30개</option>
-                        <option value="50">50개</option>
-                    </select></p>
-                </div>
-                
-            </div>
-                <div class="item-client">
-                    <div class="item-detail-review active">리뷰쓰
-                        <div class="item-review-contents"></div>
+            
+            <div class="product-container">
+                <div class="product-detail">
+                    <!-- 메인 이미지 -->
+                    <div class="main-image">
+                        <img id="mainImg" src="images/item5.jpg">
+                        <div id="zoom"></div>
                     </div>
-                    <div class="item_detail_talk">고객문의
-                        <div class="item-talk-contents"></div>
-                    </div>
-                </div>
-        </div>
-        </main>
-    <footer>
-    <ul class="contact">
-        <li><a href="#">대표전화 1111-0000</a></li>
-        <li><a href="#">고객상담 080-0000-0000</a></li>
-        <li><a href="#">프리미엄 070-0001-0001</a></li>
-    </ul>
-    <div class="copy">&copy; copyright 2026 1조마트 All rights reserved.</div>
 
-    </footer>
+                    <!-- 썸네일 -->
+                    <div class="thumb-list">
+                        <img src="images/item1.jpg" class="thumb active">
+                        <img src="images/item2.jpg" class="thumb">
+                        <img src="images/item3.jpg" class="thumb">
+                        <img src="images/item4.jpg" class="thumb">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="name info"><h1>채소 묶음, 허브, 양파, 대파, 감자, 토마토, 당근</h1></div>
+                    <div class="review-points info">★★★★☆</div>
+                    <div class="price info"><h3>9400원</h3></div>
+                    <hr>
+                    <div class="card label">무이자, 카드사별 무이자 헤택</div>
+                    <div class="favor label">구매혜택 : 충전 결제시 1.5%적립</div>
+                    <div class="deliver-info label">로그인하시면 배송지에 맞는 배송유형을 확인하실 수 있습니다.</div>
+                </div>
+
+
+
+
+
+            </div>
+        </main>
+        <footer>
+            <ul class="contact">
+                <li><a href="#">대표전화 1111-0000</a></li>
+                <li><a href="#">고객상담 080-0000-0000</a></li>
+                <li><a href="#">프리미엄 070-0001-0001</a></li>
+            </ul>
+            <div class="copy">&copy; copyright 2026 1조마트 All rights reserved.</div>
+
+        </footer>
 </body>
+
 </html>
