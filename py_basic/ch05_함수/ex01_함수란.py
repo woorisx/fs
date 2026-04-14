@@ -1,0 +1,20 @@
+
+
+# 함수(function) -> def(definition)
+'''
+    def 함수명(매개변수, ...):
+        수행할 문장   
+        return 값
+
+    함수명(인자, ...)
+'''
+
+
+# 함수 정의
+def add(a, b):
+    return a + b
+
+# 함수 호출
+result = add(3, 4) 
+print(result) # 7
+

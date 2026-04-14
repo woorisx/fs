@@ -50,7 +50,7 @@ else:
     print('걸어 간다.')
 
 
-
+# 중첩 if문
 pocket = ['paper', 'phone', 'money']
 card = True
 if 'money' in  pocket: 
