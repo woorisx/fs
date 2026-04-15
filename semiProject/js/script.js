@@ -1,6 +1,11 @@
+  $(function(){
+    // header 불러오기
+    $("#header").load("header.html");
 
-
-
+    // footer 불러오기
+    $("#footer").load("footer.html");
+  })
+  
 const showSubMenu = () => {
     let buttons = document.querySelectorAll('.menu > li');
     let subMenu = document.querySelectorAll('.sub');
@@ -113,6 +118,12 @@ window.addEventListener("scroll", () => {
         buyBar.style.pointerEvents = "auto";
     }
 });
+$(".menu li a").click(function(){
+    $(".menu li a").removeClass("active");
+    $(this).addClass("active");
+});
+
+
 
 
 showSubMenu();
