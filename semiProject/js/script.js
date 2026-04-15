@@ -6,7 +6,7 @@ const showSubMenu = () => {
 
     // 버튼 클릭 이벤트
     buttons.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('mouseover', () => {
             if (subMenu[index].style.display == 'none') {
                 subMenu[index].style.display = 'block';
             } else {
@@ -97,9 +97,9 @@ window.addEventListener("scroll", () => {
 });
 
 const buyBar = document.querySelector(".buyWrap");
-const footer = document.querySelector("footer");
+const footer = document.querySelector("#footer");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {   
     const footerTop = footer.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
