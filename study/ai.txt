@@ -2,4 +2,6 @@
 
 google 바탕의 stitch라는 프론트엔드에 기울어진 ai
 codex는 백엔드에 전문화된 ai
+cursor
+windsurf
 
