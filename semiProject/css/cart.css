@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.cartWrap {
+    width: 1024px;
+    margin: 50px auto;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cartImg img {
+    margin-left: 10px;
+    width: 80px;
+}
+
+.cartInfo {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.countBox {
+    margin-top: 10px;
+}
+
+.countBox button {
+    width: 20px;
+    height: 20px;
+}
+
+.countBox input {
+    width: 40px;
+    text-align: center;
+}
+
+.totalPrice {
+    width: 100px;
+    text-align: right;
+}
+
+.delete {
+    margin-left: 10px;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cartSummary {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.orderBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -82,5 +82,5 @@ gh repo delete woorisx/gittest --yes
 생성은 로컬에서 먼저
 
 ==vscode==
-마우스 우클릭) git bash here
+마우스 우클릭 git bash here
 > code .

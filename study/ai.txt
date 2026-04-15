@@ -1,2 +1,5 @@
-프로젝트 폴더에 별도의 woori.html 파일 만들어서 위 그림과 똑같이 html 파일과 woori.css 파일로 불리하여 코드작성
+프로젝트 폴더에 별도의 woori.html 파일 만들어서 위 그림과 똑같이 html 파일과 woori.css 파일로 분리하여 코드작성
+
+google 바탕의 stitch라는 프론트엔드에 기울어진 ai
+codex는 백엔드에 전문화된 ai
 

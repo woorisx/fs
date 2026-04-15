@@ -272,3 +272,8 @@ hr{
 .buy-fixed {
     transition: 0.3s;
 }
+
+.buy-fixed a:link, .buy-fixed a:visited{
+    color: #fff;
+    font-weight: bold;
+}
