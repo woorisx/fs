@@ -268,3 +268,7 @@ hr{
     padding: 10px 20px;
 }
 
+/* 하단 푸터에 가까워지면 구매하기 바 사라지게 설정 */
+.buy-fixed {
+    transition: 0.3s;
+}

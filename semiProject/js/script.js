@@ -83,6 +83,7 @@ window.addEventListener("scroll", () => {
 
     sections.forEach((section, index) => {
         const el = document.getElementById(section.id);
+        const buyWrap = document.getElementsByClassName('buyWrap')
         if (!el) return;
 
         const top = el.getBoundingClientRect().top;
@@ -91,12 +92,27 @@ window.addEventListener("scroll", () => {
 
         if (scrollY >= top && scrollY < bottom) {
             tabs.forEach(t => t.classList.remove("active"));
-            tabs[index].classList.add("active");
+            tabs[index].classList.add("active");    
         }
     });
 });
 
+const buyBar = document.querySelector(".buyWrap");
+const footer = document.querySelector("footer");
 
+window.addEventListener("scroll", () => {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // footer가 화면에 들어오면 숨김
+    if (footerTop < windowHeight) {
+        buyBar.style.opacity = "0";
+        buyBar.style.pointerEvents = "none";
+    } else {
+        buyBar.style.opacity = "1";
+        buyBar.style.pointerEvents = "auto";
+    }
+});
 
 
 showSubMenu();

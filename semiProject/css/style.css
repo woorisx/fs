@@ -5,7 +5,7 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-
+    list-style:none;
 }
 
 header{
@@ -138,20 +138,105 @@ ul.sub > li:hover{
 }
 
 
-footer{
-    width: 100%;
-    height: 400px;
-    background-color: #999;
+/* 전체 */
+.footer {
+    background: #f8f8f8;
+    padding: 20px 0;
+    font-size: 13px;
+    color: #555;
 }
-footer a:link, footer a:visited{
-    color: #333;
-}
-.contact{
-    text-align: center;
-    padding-top:250px;
-    padding-bottom: 50px;
-}
-.copy{
 
-    text-align: center;
+/* 상단 메뉴 */
+.footer-top {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.footer-top ul {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-top li {
+    cursor: pointer;
+}
+
+.footer-top .active {
+    color: red;
+    font-weight: bold;
+}
+
+.footer-top .highlight {
+    color: red;
+}
+
+/* 셀렉트 */
+.family select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* 메인 */
+.footer-main {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* 왼쪽 */
+.footer-main .left h3 {
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-group {
+    margin: 10px 0;
+}
+
+.btn-group button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+/* 안내문 */
+.notice {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* 오른쪽 */
+.footer-main .right {
+    text-align: right;
+}
+
+.sns {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
