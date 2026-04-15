@@ -1,0 +1,116 @@
+# 가변 매개변수
+
+# 매개변수 앞에 *을 붙이면 가변 매개변수가 된다.
+# 가변 매개변수는 함수에 전달된 인수들을 튜플로 만들어준다.
+# *args ->  args(1, 2, 3)
+def add_many(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+
+print(add_many(1, 2, 3)) # 6
+print(add_many(1, 2, 3, 4, 5)) # 15
+
+
+# 일반 매개변수와 가변 매개변수를 함께 사용
+# 가변 매개변수는 마지막에 사용한다. 
+def add_mul(choice, *args):
+    if choice == 'add':
+        result = 0
+        for i in args:
+            result += i
+    elif choice == 'mul':
+        result = 1
+        for i in args:
+            result *= i
+    return result
+
+print(add_mul('add', 1, 2, 3, 4, 5)) # 더하기 합 15
+print(add_mul('mul', 1, 2, 3, 4, 5)) # 곱하기 총 120
+
+
+
+
+# 키워드(keyword) 매개 변수
+# 함수 호출시 key = value 형태로 전달하는 매개 변수를 받을 때 (딕셔너리 형태)
+# 입력받은 키워드 매개변수들을 딕셔너리 형태로 출력
+def print_kwargs(**kwargs):
+    print(kwargs)
+
+
+print_kwargs(a=1) # {'a': 1}
+print_kwargs(name = 'foo', age = 3) # {'name': 'foo', 'age': 3}
+print_kwargs(name ='홍길동', age = 25, city = '서울', job = '프로그래머')
+# {'name': '홍길동', 'age': 25, 'city': '서울', 'job': '프로그래머'}
+
+
+# **info -> {'이름':'김철수', '나이':30, '직업':'개발자'}
+def create_profile(**info):
+    print("===== 프로필 정보 =====")
+    for key, value in info.items():
+        print(f"{key} : {value}")
+
+print('===test===')
+print(create_profile(이름 = '김철수', 나이= 30, 직업='개발자'))
+
+
+# 매개 변수의 순서는 일반 -> 가변 -> 키워드
+def mixed_function(name, *args, **kwargs):
+    print(f"이름:{name}")
+    print(f"추가 인수들:{args}")
+    print(f"키워드 인수들:{kwargs}")
+
+
+mixed_function('홍길동', 1, 2, 3, age = 25, city = '서울')
+
+'''
+이름:홍길동
+추가 인수들:(1, 2, 3)
+키워드 인수들:{'age': 25, 'city': '서울'}
+'''
+
+
+# 순서 : 일반 -> 기본값 -> 가변 -> 키워드전용 -> 키워드가변
+def final_para(a, b = 10, *args, k = 20, **kwargs):
+    # 값을 주면 기본값 무시 예) b = 10 -> b = 2
+    print(f"일반:{a}, 기본값:{b}")
+    print(f"가변:{args}")
+    print(f"키워드 전용 매개변수: {k}")
+    print(f"키워드 가변 매개변수: {kwargs}")
+
+
+final_para(1, 2, 3, 4, 5, k = 100, name = "홍길동", age = 20)
+'''
+일반:1, 기본값:2
+가변:(3, 4, 5)
+키워드 전용 매개변수: 100
+키워드 가변 매개변수: {'name': '홍길동', 'age': 20}
+'''
+
+
+def say_myself(name, age, man = True):
+        print("나의 이름은 %s입니다." % name)
+        print("나이는 %d살 입니다." % age)
+        if man:
+            print("남자입니다.")
+        else:
+            print("여자입니다.")
+
+say_myself('홍길동', 27)
+# 값을 주면 man의 기본값 무시된다.
+say_myself("이오리", 30, False)
+say_myself("이기자", 15, True)
+
+'''
+나의 이름은 홍길동입니다.
+나이는 27살 입니다.
+남자입니다.
+나의 이름은 이오리입니다.
+나이는 30살 입니다.
+여자입니다.
+나의 이름은 이기자입니다.
+나이는 15살 입니다.
+남자입니다.
+'''

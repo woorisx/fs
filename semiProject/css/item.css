@@ -43,6 +43,7 @@ a:link, a:visited{
     border-radius: 10px;
     filter: drop-shadow(10px 10px 20px #999);
     transition: all 0.6s ease-in-out;
+    
 }
 .itemBox:hover a:link,
 .itemBox:hover a:visited{
@@ -71,7 +72,7 @@ a:link, a:visited{
     border-radius: 10px 10px 0 0;
 }
 .itemInfo{
-    margin: 20px auto 10px;
+    display: block;    margin: 20px auto 10px;
 }
 .info{
     padding: 10px 0;
@@ -80,7 +81,6 @@ a:link, a:visited{
 
 .product-detail {
     width: 500px;
-    height: 1000px;
     margin: 50px auto 0;
   /* background-color: pink; */
   display: flex;
@@ -131,8 +131,7 @@ a:link, a:visited{
 
 
 
-
-/* ================= */
+/* ============================== */
 .product-container{
     width: 1024px;
     margin: 0 auto;
@@ -156,3 +155,116 @@ hr{
 .label{
     margin: 20px 0;
 }
+
+/* =========상세페이지============ */
+
+
+/* 탭 */
+.detail-tabs {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+    border-bottom: 2px solid #ddd;
+    padding: 15px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* .detail-tabs span {
+    cursor: pointer;
+    color: #777;
+}
+
+.detail-tabs .active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+} */
+
+.detail-tabs span {
+    cursor: pointer;
+    color: #999;
+    padding-bottom: 5px;
+    transition: 0.2s;
+}
+
+.detail-tabs span.active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+/* 섹션 */
+.detail-section {
+    padding: 40px 20px;
+    background: #fff;
+    margin-top: 10px;
+    width: 1024px;
+    margin:0 auto;
+}
+
+.detail-section img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* 추천상품 */
+.recommend-list {
+    display: flex;
+    gap: 20px;
+}
+
+.rec-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* 리뷰 */
+.review-box {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+/* 테이블 */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* 하단 고정 */
+.buyWrap{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+.buy-fixed {
+    width:1024px;
+    margin: 0 auto;
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-fixed button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+

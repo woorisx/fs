@@ -63,7 +63,7 @@
             </nav>
         </header>
         <main>
-            
+
             <div class="product-container">
                 <div class="product-detail">
                     <!-- 메인 이미지 -->
@@ -81,30 +81,117 @@
                     </div>
                 </div>
                 <div class="product-info">
-                    <div class="name info"><h1>채소 묶음, 허브, 양파, 대파, 감자, 토마토, 당근</h1></div>
+                    <div class="name info">
+                        <h1>채소 묶음, 허브, 양파, 대파, 감자, 토마토, 당근</h1>
+                    </div>
                     <div class="review-points info">★★★★☆</div>
-                    <div class="price info"><h3>9400원</h3></div>
+                    <div class="price info">
+                        <h3>9400원</h3>
+                    </div>
                     <hr>
                     <div class="card label">무이자, 카드사별 무이자 헤택</div>
                     <div class="favor label">구매혜택 : 충전 결제시 1.5%적립</div>
                     <div class="deliver-info label">로그인하시면 배송지에 맞는 배송유형을 확인하실 수 있습니다.</div>
                 </div>
-
-
-
-
-
             </div>
-        </main>
-        <footer>
-            <ul class="contact">
-                <li><a href="#">대표전화 1111-0000</a></li>
-                <li><a href="#">고객상담 080-0000-0000</a></li>
-                <li><a href="#">프리미엄 070-0001-0001</a></li>
-            </ul>
-            <div class="copy">&copy; copyright 2026 1조마트 All rights reserved.</div>
+            
+                <!-- 탭 메뉴 -->
+                <div class="detail-tabs">
+                    <span class="active" onclick="moveTab('detail', 0)">상품상세정보</span>
+                    <span onclick="moveTab('review', 1)">고객리뷰</span>
+                    <span onclick="moveTab('recommend', 2)">추천상품</span>
+                    <span onclick="moveTab('info', 3)">교환/반품 안내</span>
+                </div>
 
-        </footer>
+                <!-- 상세 이미지 영역 -->
+                <div id="detail" class="detail-section">
+                    <img src="images/item5.jpg">
+                    <img src="images/item2.jpg">
+                    <img src="images/item3.jpg">
+                </div>
+
+                <!-- 포인트 영역 -->
+                <div class="detail-section">
+                    <h3>POINT</h3>
+                    <img src="images/item1.jpg">
+                </div>
+            
+            <!-- 추천 상품 -->
+            <div id="recommend" class="detail-section">
+                <h3>추천 상품</h3>
+                <div class="recommend-list">
+                    <div class="rec-item">
+                        <img src="images/item1.jpg">
+                        <p>신선 채소</p>
+                    </div>
+                    <div class="rec-item">
+                        <img src="images/item2.jpg">
+                        <p>과일 세트</p>
+                    </div>
+                    <div class="rec-item">
+                        <img src="images/item3.jpg">
+                        <p>샐러드</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 리뷰 -->
+            <div id="review" class="detail-section">
+                <h3>고객리뷰 ⭐ 4.8</h3>
+
+                <div class="review-box">
+                    <p>★★★★★</p>
+                    <p>신선하고 좋아요!</p>
+                </div>
+
+                <div class="review-box">
+                    <p>★★★★☆</p>
+                    <p>배송 빠르고 만족</p>
+                </div>
+            </div>
+
+            <!-- 상품 정보 -->
+            <div id="info" class="detail-section">
+                <h3>상품 정보</h3>
+
+                <table class="info-table">
+                    <tr>
+                        <td>상품명</td>
+                        <td>채소 묶음</td>
+                    </tr>
+                    <tr>
+                        <td>원산지</td>
+                        <td>국내산</td>
+                    </tr>
+                    <tr>
+                        <td>보관방법</td>
+                        <td>냉장보관</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 하단 고정 구매 -->
+            <div class="buyWrap">
+                <div class="buy-fixed">
+                    <span>9,400원</span>
+                    <button>구매하기</button>
+                </div>
+            </div>
+
+
+
+
+    </div>
+    </main>
+    <footer>
+        <ul class="contact">
+            <li><a href="#">대표전화 1111-0000</a></li>
+            <li><a href="#">고객상담 080-0000-0000</a></li>
+            <li><a href="#">프리미엄 070-0001-0001</a></li>
+        </ul>
+        <div class="copy">&copy; copyright 2026 1조마트 All rights reserved.</div>
+
+    </footer>
 </body>
 
 </html>
