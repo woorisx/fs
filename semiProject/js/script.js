@@ -1,10 +1,4 @@
-  $(function(){
-    // header 불러오기
-    $("#header").load("header.html");
 
-    // footer 불러오기
-    $("#footer").load("footer.html");
-  })
   
 const showSubMenu = () => {
     let buttons = document.querySelectorAll('.menu > li');
