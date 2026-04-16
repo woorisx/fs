@@ -100,9 +100,13 @@ git fetch origin
 git branch
 git branch -a(전체 리포지토리 보여줌)
 
-git checkout <branch> 브랜치로 이동
+==브랜치로 이동==
+git checkout <branch> 
 git checkout -b <brach>새로 생성
 
-git checkout -b feature/woori (새로생성)
-git push -u origin feature/woori (다운로드)
+==새로생성==
+git checkout -b feature/woori 
+
+==다운로드==
+git push -u origin feature/woori 
 
