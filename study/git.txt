@@ -84,3 +84,25 @@ gh repo delete woorisx/gittest --yes
 ==vscode==
 마우스 우클릭 git bash here
 > code .
+
+
+
+==초기화==
+git init
+
+==연결==
+git remote add origin <url>
+
+==데이터 가져오기==연결만 됐지 다운로드 받지 못함
+git fetch origin
+
+==브랜치확인하기==
+git branch
+git branch -a(전체 리포지토리 보여줌)
+
+git checkout <branch> 브랜치로 이동
+git checkout -b <brach>새로 생성
+
+git checkout -b feature/woori (새로생성)
+git push -u origin feature/woori (다운로드)
+
