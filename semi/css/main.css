@@ -1,0 +1,80 @@
+/* Heritage Namhae Custom Styles */
+
+:root {
+  --primary-teal: #4BB6AC;
+  --dark-teal: #0f4c4a;
+  --zinc-900: #18181b;
+  --zinc-600: #52525b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Smooth Transitions */
+.category-tab {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-tab:active {
+  transform: scale(0.95);
+}
+
+/* Header Scroll Effect */
+header.shadow-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Product Card Hover */
+.group:hover img {
+  transform: scale(1.05);
+}
+
+/* Navigation Link Underline Animation */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-teal);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Custom Hero Layout adjustment for typography */
+h1 {
+    text-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
