@@ -1,0 +1,17 @@
+회원테이블
+
+CREATE TABLE MEMBER(
+	member_id	VARCHAR(20)	COMMENT'아이디',
+	member_pwd 	VARCHAR(100)	NOT NULL COMMENT'비밀번호',
+	member_name	 VARCHAR(20)	NOT NULL COMMENT'이름',
+	member_nickname 	VARCHAR(30)		COMMENT'별명',
+	member_phone_number	VARCHAR(15)		COMMENT'전화번호',
+	member_email	VARCHAR(50) NOT NULL 	COMMENT'이메일',
+	member_zipcode VARCHAR(10) 		COMMENT'우편번호',
+	member_adrs VARCHAR(50)	COMMENT'도로명주소',
+	member_adrs_detail VARCHAR(10)	COMMENT'상세주소',
+	member_img_name VARCHAR(100) COMMENT'회원 이미지',
+	member_join_date DATE	COMMENT'가입일',
+	member_up_date DATE	COMMENT'수정일',
+	PRIMARY KEY(member_id)
+)COMMENT'회원';
