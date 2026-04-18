@@ -315,10 +315,19 @@ h2{
     padding: 64px 0;
     scroll-margin-top: var(--nav-height);
 }
-#profile > h2{
-    margin: 0;
-    padding: 0;
+.bigTitle{
+    /* display: inline-block; */
+    width: fit-content;
+    border-radius: 5px;
+    /* border: 1px dashed white; */
+    text-align: center;
+    margin: 0 auto;
+    font-size: 35px;
+    filter: drop-shadow(10px 10px 10px #333);
+    background-color: transparent;
 }
+
+
 #profile > .proWrap > .tools > h2{
     padding-top: 310px;
 }
@@ -429,8 +438,8 @@ h2{
 }
 #project > .myworkWrap > .portfolio > .work{
     width: calc((100% - 48px) / 3);
-    height: 200px;
-    margin: 0;
+    height: 250px;
+    margin: 10px 0;
     font-size: 14px;
     border-radius: 10px;
     cursor: pointer;
@@ -448,7 +457,7 @@ h2{
 }
 #project > .myworkWrap > .portfolio > .work > a{
     display: inline-block;
-    padding-top: 75px;
+    padding-top: 125px;
     /* width: 300px; */
     height: 150px;
     text-shadow: 1px 1px #fff;
@@ -470,7 +479,7 @@ h2{
 #project > .myworkWrap > .portfolio > .mywork0{
     /* filter: grayscale(1); */
     width: calc((100% - 48px) / 3);
-    height: 200px;
+    height: 250px;
     background-image: url(../images/soon2.jpg);
 }
 #project > .myworkWrap > .portfolio > .mywork0:hover{
