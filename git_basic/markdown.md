@@ -57,7 +57,7 @@ ___굵게기울이기___
 ```
     ![대체텍스트](url)
 ```
-![마크다운](https://woorisx.github.io/fs/git_basic/markdown.png)
+![마크다운](https://w7.pngwing.com/pngs/134/956/png-transparent-markdown-computer-icons-formatted-text-github-watermark-blue-angle-text.png)
 ![마크다운](https://woorisx.github.io/fs/git_basic/markdown.png)
 
 
