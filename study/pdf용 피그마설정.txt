@@ -1,7 +1,21 @@
-피그마 주소 : https://www.figma.com/design/XvnmqAsFxyv0a343COhrU3/%EC%83%9D%EC%84%B1%ED%98%95-AI%EC%99%80-AWS%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%92%80%EC%8A%A4%ED%83%9D---%EC%9E%90%EB%8F%99%ED%99%94-%EC%8B%A4%EB%AC%B4%EA%B0%9C%EB%B0%9C?node-id=0-1&p=f&t=Yib4IWnMD1aM7djX-0
+피그마 주소 : 
+
+그렇지 않고 어떻게 텅 빈 화폭에서 그림을 볼 수 있겠는가.
+어떻게 침묵 속에 앉아
+결코 씌어진 적이 없는 노래를 들을 수 있겠는가.
+또는 붉은 행성들을 응시하면서 우주 정거장을 떠올릴 수 있겠는가
+
+어떤 사람들은 그들을 미치광이라 부르지만,
+우리는 그들을 천재라고 부른다.
+세상을 바꿀 수 있다고 생각할 만큼 미친 사람들만이
+결국 세상을 바꿀 수 있기 때문에.
+
+
+어느 고등학교 교사가 썼다고 전해지는 이 시는
+애플 컴퓨터 사의 텔레비전 광고에 사용되었다.
                                                         
 
-
+2조중심 : https://www.figma.com/design/XvnmqAsFxyv0a343COhrU3/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-2&t=7yBoid1FSvYfbTiT-1
 
 프레임 크기 : 1440*1024
 

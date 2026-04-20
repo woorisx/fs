@@ -1,102 +1,167 @@
-$(document).ready(function(){
-    var menu_offset = $('nav').offset();
-
-    $(window).scroll(function(){
-        if($(document).scrollTop() > menu_offset.top){
-            $('nav').addClass('menuFixed');
-        }else{
-            $('nav').removeClass('menuFixed');
-        }
-    })
-
-
-    var typed = new Typed('#motto', {
-      strings: ['꿈이여, 이루어져라.', '&amp; Everyone deserves a second chance.'],
-      typeSpeed: 50,
-      backSpeed:50,
-      loop:true
+$(document).ready(function () {
+    const nav = document.querySelector("nav");
+    const topButton = document.getElementById("topbutton");
+    const menuLinks = Array.from(document.querySelectorAll(".main-menu > li > a"));
+    const sectionLinks = menuLinks.filter((link) => {
+        const href = link.getAttribute("href") || "";
+        return href.startsWith("#") && href !== "#";
     });
-});
+    const sections = sectionLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
 
+    let isWheelLocked = false;
 
+    const getNavHeight = () => (nav ? nav.offsetHeight : 0);
 
-
-
-var backToTop = () =>{
-    
-    //scroll
-    window.addEventListener('scroll', () =>{
-        if(document.querySelector('html').scrollTop > 100){
-            document.getElementById('topbutton').style.display='block';
-        }else{
-            document.getElementById('topbutton').style.display='none';
-        }
-    });
-    
-    //back to top
-    document.getElementById('topbutton').addEventListener('click', ()=>{
-        window.scrollTo({
-            top:0,
-            left:0,
-            behavior: 'smooth'
-        });
-    })
-};
-
-var scrollPageEvent = () =>{
-
-    console.log("pageYOffset : "+pageYOffset);
-    let pageCount=0;
-    let scrollPosition=0
-    const bodyObject = document.querySelector('#container');
-    const sections = document.querySelectorAll('section').length;
-        bodyObject.addEventListener('wheel', function(e){
-            e.preventDefault();
-            if(e.deltaY < 0){
-                //위로
-                if(pageCount<=0) return;
-                pageCount--;
-            }
-            if(e.deltaY > 0){
-                //아래로
-                if(pageCount >= 3) return;
-                pageCount++;
-
-            }
-            scrollPosition = pageCount * window.innerHeight;
-            window.scrollTo({left:0, top:scrollPosition, behavior:"smooth"})
-            
-            const aObj = document.querySelectorAll(".main-menu > li > a");
-            const fixedObj = document.querySelector(".fixed");
-                fixedObj.classList.remove("fixed");
-                aObj[pageCount].classList.add("fixed");
-
-            aObj.forEach((item, index)=>{
-                item.addEventListener('click', function(){
-                    aObj.forEach(menu =>{
-                        menu.classList.remove('fixed');
-                    })
-                    item.classList.add("fixed");
-                    
-                })
-            })
-        },{passive:false})
+    const getSectionTop = (section) => {
+        const top = section.getBoundingClientRect().top + window.scrollY;
+        return Math.max(top - getNavHeight(), 0);
     };
 
+    const setActiveMenu = (targetId) => {
+        menuLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            const isMatch = href === `#${targetId}`;
+            const isHome = targetId === "home" && href === "#";
+            link.classList.toggle("fixed", isMatch || isHome);
+        });
+    };
 
+    const syncMenuState = () => {
+        if (!nav) {
+            return;
+        }
 
+        const scrollY = window.scrollY;
+        const navTop = nav.offsetTop;
 
-// const text = document.getElementById('h1').innerHTML;
-// const typingElement = document.getElementById("motto");
-// let index =0;
-// function type() {
-//     if (index < text.length) {
-//         typingElement.textContent += text.charAt(index);
-//         index++;
-//         setTimeout(type,150);// 0.15초 간격으로 반복
-//     }
-// }
+        if (scrollY > navTop) {
+            nav.classList.add("menuFixed");
+        } else {
+            nav.classList.remove("menuFixed");
+        }
 
-// type();
-backToTop();
-scrollPageEvent();
+        let current = null;
+
+        for (let index = sections.length - 1; index >= 0; index -= 1) {
+            if (scrollY + getNavHeight() + 20 >= sections[index].offsetTop) {
+                current = sections[index];
+                break;
+            }
+        }
+
+        if (scrollY < 40 || !current) {
+            setActiveMenu("home");
+            return;
+        }
+
+        setActiveMenu(current.id);
+    };
+
+    const scrollToSection = (section) => {
+        window.scrollTo({
+            top: getSectionTop(section),
+            left: 0,
+            behavior: "smooth"
+        });
+    };
+
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href");
+
+            if (href === "#") {
+                event.preventDefault();
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                setActiveMenu("home");
+                return;
+            }
+
+            const target = document.querySelector(href);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+            scrollToSection(target);
+            setActiveMenu(target.id);
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        if (topButton) {
+            topButton.style.display = window.scrollY > 100 ? "block" : "none";
+        }
+
+        syncMenuState();
+    });
+
+    if (topButton) {
+        topButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
+    document.addEventListener("wheel", (event) => {
+        if (window.innerWidth <= 768 || isWheelLocked || sections.length === 0) {
+            return;
+        }
+
+        const direction = Math.sign(event.deltaY);
+
+        if (direction === 0) {
+            return;
+        }
+
+        const currentIndex = sections.findIndex((section, index) => {
+            const sectionTop = getSectionTop(section);
+            const nextTop = index < sections.length - 1 ? getSectionTop(sections[index + 1]) : Number.POSITIVE_INFINITY;
+            const currentScroll = window.scrollY + 10;
+            return currentScroll >= sectionTop && currentScroll < nextTop;
+        });
+
+        let nextIndex = currentIndex;
+
+        if (direction > 0) {
+            nextIndex = currentIndex < 0 ? 0 : Math.min(currentIndex + 1, sections.length - 1);
+        } else {
+            nextIndex = currentIndex <= 0 ? -1 : currentIndex - 1;
+        }
+
+        if ((direction < 0 && currentIndex === -1) || nextIndex === currentIndex) {
+            return;
+        }
+
+        event.preventDefault();
+        isWheelLocked = true;
+
+        if (nextIndex === -1) {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            setActiveMenu("home");
+        } else {
+            scrollToSection(sections[nextIndex]);
+            setActiveMenu(sections[nextIndex].id);
+        }
+
+        window.setTimeout(() => {
+            isWheelLocked = false;
+        }, 700);
+    }, { passive: false });
+
+    if (document.getElementById("motto")) {
+        new Typed("#motto", {
+            strings: ["Dreams are always unfinished.", "&amp; Everyone deserves a second chance."],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    }
+
+    syncMenuState();
+});
