@@ -1,0 +1,2 @@
+cd C:\suhwo\git\semi_food
+.\gradlew bootRun
