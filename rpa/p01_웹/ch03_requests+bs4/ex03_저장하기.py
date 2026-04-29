@@ -10,7 +10,8 @@ os.path.join(디렉토리, 파일명)
 import requests
 import os
 
-image_url = "//imgs.xkcd.com/comics/soniferous_aether.png"
+image_url = "https://xkcd.com"
+# image_url = "//imgs.xkcd.com/comics/soniferous_aether.png"
 
 if not image_url.startswith("http"):
     image_url = "https:" + image_url
@@ -18,12 +19,12 @@ if not image_url.startswith("http"):
 try:
     # 저장 폴더 생성
     save_folder = 'xkcd_comics'
-    os.makedirs(save_folder, exist_ok=True)
+    os.makedirs(save_folder, exist_ok=True) # exist_ok=True: 이미 존재하면 만들지 않는다.
 
     response = requests.get(image_url, timeout=10)
     response.raise_for_status()
 
-    file_name = os.path.basename(image_url) #piercing.png
+    file_name = os.path.basename(image_url) #piercing.png(basename:파일명만 표시)
     save_path = os.path.join(save_folder, file_name)
 
     print(save_path)
