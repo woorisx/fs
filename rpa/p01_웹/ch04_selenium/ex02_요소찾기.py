@@ -21,7 +21,7 @@ from selenium.webdriver.common.by import By
 browser = webdriver.Chrome()
 browser.get("https://www.naver.com")
 
-time.sleep(2)
+time.sleep(2) #2초 대기
 
 try:
     search_box = browser.find_element(By.ID, 'query') #find_element는 예외발생가능
@@ -32,12 +32,35 @@ except Exception as e:
     print("에러: ", e)
 
 menu_links = browser.find_elements(By.CLASS_NAME, 'link_service')
+'''
+ ID: ByType = "id"
+    XPATH: ByType = "xpath"
+    LINK_TEXT: ByType = "link text"
+    PARTIAL_LINK_TEXT: ByType = "partial link text"
+    NAME: ByType = "name"
+    TAG_NAME: ByType = "tag name"
+    CLASS_NAME: ByType = "class name"
+    CSS_SELECTOR: ByType = "css selector"
+'''
 
 print(len(menu_links))
 
 for link in menu_links:
     if link.text.strip():
-        print("링크 :", link.text.strip())
+        print("링크 :", link.text.strip())#strip(): 앞뒤 공백 제거하는 함수
+        '''
+        링크 : 메일
+        링크 : 카페
+        링크 : 블로그
+        링크 : 스토어
+        링크 : 뉴스
+        링크 : 증권
+        링크 : 부동산
+        링크 : 지도
+        링크 : 웹툰
+        링크 : 치지직
+        추천
+        '''
 
 time.sleep(10)
 browser.quit()
