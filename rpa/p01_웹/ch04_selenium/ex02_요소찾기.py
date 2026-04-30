@@ -43,7 +43,7 @@ menu_links = browser.find_elements(By.CLASS_NAME, 'link_service')
     CSS_SELECTOR: ByType = "css selector"
 '''
 
-print(len(menu_links))
+print(len(menu_links)) # 11
 
 for link in menu_links:
     if link.text.strip():
@@ -60,6 +60,7 @@ for link in menu_links:
         링크 : 웹툰
         링크 : 치지직
         추천
+        링크 : 바로가기 펼침
         '''
 
 time.sleep(10)
