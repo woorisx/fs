@@ -1,0 +1,40 @@
+# https://developer.mozilla.org/ko/docs/Web/HTTP/Guides/MIME_types/Common_types
+
+import smtplib, os
+from account import *
+from email.message import EmailMessage
+
+msg = EmailMessage()
+msg["Subject"] = "테스트 메일" # 메일 제목
+msg["From"] = EMAIL_ADDRESS # 수신자
+msg["To"] = "suhwooree@gmail.com" # 발신자
+
+msg.set_content("첨부 파일을 포함한 메일입니다.") # 메일 본문
+
+# 현재 실행 중인 파이썬 파일의 폴더 경로를 가져옵니다. (__file__)
+current_path = os.path.dirname(__file__)
+file_path1 = os.path.join(current_path, "python.png")
+# c:\suhwo\git\fs\rpa\p02_이메일\python.png
+file_path2 = os.path.join(current_path, "테스트.pdf")
+file_path3 = os.path.join(current_path, "테스트.xlsx")
+print(current_path)
+# c:\suhwo\git\fs\rpa\p02_이메일
+
+# MIME-Type: image/png, application/pdf, application/octet-stream
+# msg.add_attachment("python.png")
+
+
+# 첨부 파일 적용
+with open(file_path1, "rb") as f: # rb = read byte
+    msg.add_attachment(f.read(), maintype="image", subtype="png", filename=f.name)
+with open(file_path2, "rb") as f:
+    msg.add_attachment(f.read(), maintype="application", subtype="pdf", filename=f.name)
+with open(file_path3, "rb") as f:
+    msg.add_attachment(f.read(), maintype="application", subtype="octet-stream", filename=f.name)
+
+
+with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
+    smtp.ehlo() # smtp server에 접속 확인
+    smtp.starttls() # 모든 내용이 암호화되어 전송
+    smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD) # 로그인
+    smtp.send_message(msg)
