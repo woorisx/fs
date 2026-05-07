@@ -604,6 +604,11 @@ footer > .info > .sns > .snsimg:hover img{
 }
 
 @media (max-width: 1024px){
+    :root{
+        --content-width: 900px;
+        --content-gutter: 24px;
+    }
+
     .main-menu{
         font-size: 18px;
     }
@@ -612,10 +617,31 @@ footer > .info > .sns > .snsimg:hover img{
         height: 70vh;
     }
 
-    #profile > .proWrap > .me,
+    #profile > .proWrap > .me{
+        flex: 0 0 calc((100% - 24px) / 2);
+        margin: 0;
+    }
+
+    #profile > .proWrap{
+        gap: 24px;
+    }
+
+    #profile > .proWrap > .record{
+        flex-basis: 100%;
+    }
+
+    .profileImg{
+        width: 180px;
+        height: 180px;
+    }
+
     #project > .myworkWrap > .portfolio > .work,
     #project > .myworkWrap > .portfolio > .mywork0{
         width: calc((100% - 24px) / 2);
+    }
+
+    footer .info{
+        align-items: center;
     }
 }
 
@@ -628,6 +654,11 @@ footer > .info > .sns > .snsimg:hover img{
     .section{
         min-height: calc(100vh - var(--nav-height));
         padding: 48px 0;
+    }
+
+    .bigTitle{
+        font-size: 30px;
+        margin-bottom: 24px;
     }
 
     #footer.section{
@@ -650,10 +681,17 @@ footer > .info > .sns > .snsimg:hover img{
         width: 100%;
         font-size: 16px;
         flex-wrap: wrap;
+        line-height: 1.2;
     }
 
     .main-menu > li{
         min-width: 33.333%;
+    }
+
+    .main-menu > li > a{
+        height: 42px;
+        padding: 10px 6px;
+        word-break: keep-all;
     }
 
     .carouselSize{
@@ -670,6 +708,7 @@ footer > .info > .sns > .snsimg:hover img{
 
     .poem > .poemBox{
         flex-direction: column;
+        filter: drop-shadow(6px 8px 14px rgba(0,0,0,0.35));
     }
 
     .poem > .poemBox > .extraImg{
@@ -687,8 +726,26 @@ footer > .info > .sns > .snsimg:hover img{
         text-align: left;
     }
 
+    #profile > .proWrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    #profile > .proWrap > .me{
+        width: 100%;
+        margin: 0;
+        filter: drop-shadow(6px 8px 14px rgba(0,0,0,0.35));
+    }
+
     #profile > .proWrap > .tools > h2{
-        padding-top: 220px;
+        padding-top: 160px;
+    }
+
+    .profileImg{
+        width: 160px;
+        height: 160px;
     }
 
     #project > .myworkWrap{
@@ -702,6 +759,8 @@ footer > .info > .sns > .snsimg:hover img{
     #project > .myworkWrap > .portfolio > .work,
     #project > .myworkWrap > .portfolio > .mywork0{
         width: 100%;
+        height: 230px;
+        filter: drop-shadow(6px 8px 14px rgba(0,0,0,0.22));
     }
 
     footer{
@@ -718,95 +777,117 @@ footer > .info > .sns > .snsimg:hover img{
         margin: 0;
     }
 
+    footer .info{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    footer .git-repository{
+        margin-top: 20px;
+    }
+
+    footer .git-repository > p{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 0;
+        overflow-wrap: anywhere;
+    }
+
+    footer .git-repository label{
+        width: fit-content;
+    }
+
     footer .sns{
+        width: 100%;
         height: auto;
+        justify-content: flex-start;
+        gap: 14px;
+        flex-wrap: wrap;
     }
 }
 
-/* === ?뚯뒪??硫붿씤 === */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+@media (max-width: 480px){
+    :root{
+        --content-gutter: 12px;
+        --nav-height: 156px;
+    }
 
-/* ?ㅻ뜑 */
-.header {
-    border-bottom: 1px solid #ddd;
-}
+    .bar{
+        width: calc(100% - (var(--content-gutter) * 2));
+    }
 
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-}
+    .main-menu{
+        font-size: 14px;
+    }
 
-.logo {
-    font-size: 24px;
-    color: green;
-}
+    .main-menu > li{
+        min-width: 50%;
+    }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    background: #f5f5f5;
-}
+    .carousel-item{
+        height: 48vh;
+    }
 
-/* 諛곕꼫 */
-.banner {
-    overflow: hidden;
-    height: 300px;
-}
+    .poem{
+        padding-top: 24px;
+    }
 
-.slides {
-    display: flex;
-    transition: 0.5s;
-}
+    .poem > .poemBox{
+        border-radius: 14px;
+    }
 
-.slides img {
-    width: 100%;
-}
+    .poem > .poemBox > .extraImg{
+        min-height: 180px;
+        border-radius: 14px 14px 0 0;
+    }
 
-/* ?곹뭹 */
-.product-section {
-    padding: 30px;
-}
+    .poem .poemBox #text{
+        font-size: 13px;
+        padding: 18px 14px 22px;
+    }
 
-.product-list {
-    display: flex;
-    gap: 20px;
-}
+    tag{
+        max-width: 100%;
+        height: auto;
+        min-height: 30px;
+        line-height: 20px;
+        overflow-wrap: anywhere;
+    }
 
-.product {
-    width: 200px;
-}
+    #profile > .proWrap > .me{
+        padding: 16px;
+        border-radius: 8px;
+    }
 
-.product img {
-    width: 100%;
-}
+    #profile > .proWrap > .tools > h2{
+        padding-top: 120px;
+    }
 
-/* 異붿쿇 */
-.recommend {
-    background: #f9f9f9;
-    padding: 30px;
-}
+    #project > .myworkWrap > .portfolio > .work,
+    #project > .myworkWrap > .portfolio > .mywork0{
+        height: 200px;
+        border-width: 6px;
+        border-radius: 12px;
+    }
 
-.recommend-list {
-    display: flex;
-    gap: 20px;
-}
+    #project > .myworkWrap > .portfolio > .work:hover{
+        border-width: 6px;
+    }
 
-.card img {
-    width: 250px;
-}
+    #project > .myworkWrap > .portfolio > .work > a{
+        width: 100%;
+        padding-top: 96px;
+    }
 
-/* ?명꽣 */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+    footer{
+        font-size: 14px;
+    }
+
+    footer .sns img{
+        width: 42px;
+        height: 42px;
+    }
 }
 
